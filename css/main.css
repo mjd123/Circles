@@ -211,11 +211,19 @@ body {
   background-color: rgba(49, 188, 159, 1);
 }
 
+#canvas {
+  position: absolute;
+  margin: auto;
+  margin-top: 60px;
+  margin-bottom: 60px;
+  padding-left: 0px;
+}
+
 .content{
     width: 100%;
     height: 100%;
     /*background-color:grey;*/
-    max-width: 80%;
+    max-width: 100%;
     margin: auto;
     margin-top: 60px;
     margin-bottom: 60px;
@@ -254,6 +262,11 @@ body {
   -webkit-filter: grayscale(0%); /* Safari 6.0 - 9.0 */
   filter: grayscale(0%);
 
+}
+
+.circle_rows {
+  max-width: 80%;
+  margin: auto;
 }
 
 
