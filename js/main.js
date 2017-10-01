@@ -44,62 +44,63 @@ function draw(e) {
     radius: getRandomInt(1, 10),
     opacity: Math.random() * 1 + 0,
     drawn: false
-  });
+  })
 
   for (var i = 0; i < particles.length; i++) {
     ctx.beginPath();
     ctx.globalAlpha = particles[i].opacity;
-    ctx.arc(
-      particles[i].x, particles[i].y, particles[i].radius,
-      false, Math.PI * 2, false);
+    ctx.arc(particles[i].x, particles[i].y, particles[i].radius,false, Math.PI * 2, false);
     ctx.globalAlpha = particles[i].opacity;
     ctx.fill();
-    particles[i].drawn  = true;
+    particles[i].drawn = true;
     console.log(particles[i].y);
-
   }
+};
 
-}
+//center x = position.left
+//center y = position.top
+var radius = 116 //do radius calc instead
+//var point_size = getRandomInt(5,10);
+var center_x = 0;
+var center_y = 0;
+var font_size = "20px";
 
 function circleSuround(e) {
+
   var rect = this.getBoundingClientRect();
   console.log(rect);
+
   var position = {
-    top: rect.top + window.pageYOffset,
-    left: rect.left + window.pageXOffset,
-    width: rect.width / 2 + rect.width,
-    height: rect.height / 2 + rect.height
-
-  };
-  //x.x = position.left * Math.random()
-  //x.y = position.top * Math.random()
-
-
-
-
-
-  for (var i = 0; i < particles.length; i++) {
-    //ctx.clearRect(0, 0, canvas.width, canvas.height);
-    ctx.beginPath();
-    ctx.globalAlpha = particles[i].opacity;
-    ctx.arc(
-      position.width, position.height, particles[i].radius,
-      false, Math.PI * 2, false);
-    ctx.globalAlpha = particles[i].opacity;
-    ctx.fill();
-    clearCircles()
-  }
-  console.log(position.top, position.left);
-}
-
-function clearCircles() {
-  for (var i = 0; i < particles.length; i++) {
-    if (particles[i].drawn) {
-      particles[i].opacity - 1
-    }
+    top: rect.top - content.offsetTop, //center_y
+    left: rect.left + content.offsetLeft, // center_x
+    width: rect.width / 2,
+    height: rect.height / 2
   }
 
+  ctx.beginPath();
+  ctx.arc(position.left + position.width, position.top + position.height, 116, 0, 2 * Math.PI);
+  ctx.stroke();
+  center_x = position.left + position.width;
+  center_y = position.top + position.height;
+  drawPoint(90, 2, "A");
+  //drawPoint(getRandomInt(0,180),1,"C");
 }
 
+
+function drawPoint(angle, distance, label) {
+  var x = center_x + radius * Math.cos(-angle * Math.PI / 180) * distance;
+  var y = center_y + radius * Math.sin(-angle * Math.PI / 180) * distance;
+  var point_size = getRandomInt(5, 10); //random point size
+  ctx.beginPath();
+  ctx.arc(x, y, point_size, 0, 2 * Math.PI);
+  ctx.fill();
+
+  ctx.font = font_size;
+  ctx.fillText(label, x + 10, y);
+}
+
+// circles need to position themselfs around images when hovered overflow
+//canvas needs to clear when scrolled
+// there needs to be a maximum amount of particles on the page
 canvas.addEventListener('mousemove', draw);
 circle.forEach((x) => x.addEventListener('mouseover', circleSuround));
