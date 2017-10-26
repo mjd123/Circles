@@ -96,7 +96,8 @@ textarea {
    ========================================================================== */
 
 body {
-    background: #e5e5e5
+  /*background: #333333;*/
+  background: #e5e5e5
 }
 
 .nav{
@@ -272,20 +273,22 @@ body {
 
 .about_section {
     margin: auto;
-    width: 100%;
+    width: 98%;
     margin-top: 0px;
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
     background-color: rgba(49, 188, 159, 1);
     border-left: 1px solid black;
+    position: relative;
+    z-index: -5;
 }
+
 
 .about {
     margin: 105px 40px 105px 0px;
-    border-right: 2px black;
-    border-left: 2px black;
     max-width: 60%;
+    position: relative;
 }
 
 .about_section img {
@@ -298,7 +301,7 @@ body {
     margin-top: 105px;
     margin-left: 40px;
     margin-bottom: 105px;
-    margin-right: 80px
+    margin-right: 80px;
 }
 
 .about_section p {
@@ -317,7 +320,9 @@ h2{
 .contact_section  {
     background: #333333;
     padding-top: 5%;
-    padding-bottom: 10%;
+    padding-bottom: 5%;
+    width: 98%;
+    margin: auto;
 }
 
 .contact_section h3, h4 {
