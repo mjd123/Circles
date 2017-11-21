@@ -227,7 +227,11 @@ body {
 
 #canvas {
   position: absolute;
-  padding-left: 0px;
+  width: 100%;
+  left: 0;
+  right: 0;
+  top: 0;
+  background: grey;
 }
 
 .content {

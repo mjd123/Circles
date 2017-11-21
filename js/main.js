@@ -22,9 +22,11 @@ function getRandomInt(min, max) {
 
 const canvas = document.querySelector('#canvas');
 canvas.width = content.clientWidth;
-canvas.height = content.clientHeight;
+var styles = getComputedStyle(content);
+var marginTop = parseFloat(styles['marginTop']);
+canvas.height = content.offsetHeight + marginTop;
 const ctx = canvas.getContext('2d');
-console.log(content.clientHeight + 'Height');
+console.log(canvas.height + 'Height');
 const circle = document.querySelectorAll('.circle');
 
 ctx.lineJoin = 'round';
@@ -39,8 +41,8 @@ const clickX = 0;
 const clickY = 0;
 
 const radius = circle[0].clientWidth / 2; // do radius calc instead
-let center_x = 0;
-let center_y = 0;
+let centerX = 0;
+let centerY = 0;
 const position = {
   top: 0, // center_y
   left: 0, // center_x
@@ -56,14 +58,14 @@ function circleSuround() {
 
   const rect = this.getBoundingClientRect();
 
-  position.top = rect.top - content.offsetTop; // center_y
+  position.top = rect.top - content.offsetTop + marginTop; // center_y
   position.left = rect.left + content.offsetLeft; // center_x
   position.width = rect.width / 2;
   position.height = rect.height / 2;
 
-  center_x = position.left + position.width;   //change
-  center_y = position.top + position.height;  //improve so scrolling doesnt affect particle position
-
+  centerX = position.left + position.width;   //change
+  centerY = position.top + position.height + window.scrollY;  //improve so scrolling doesnt affect particle position
+  console.log({ centerY, centerX });
   point_size = getRandomInt(3, 5);
 }
 
@@ -84,8 +86,8 @@ function drawCircle(amount) {
 }
 
 function drawPoint(angle, distance) {
-  const x = center_x + radius * Math.cos(-angle * Math.PI / 180) * distance;
-  const y = center_y + radius * Math.sin(-angle * Math.PI / 180) * distance;
+  let x = centerX + radius * Math.cos(-angle * Math.PI / 180) * distance;
+  let y = centerY + radius * Math.sin(-angle * Math.PI / 180) * distance;
   ctx.beginPath();
   ctx.arc(x, y, point_size, 0, 2 * Math.PI);
   ctx.fill();
