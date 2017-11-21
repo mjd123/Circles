@@ -20,64 +20,72 @@
   <!--[if lt IE 8]>
             <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
+    <div id="menu"> <!-- on click this becomes visible -->
+          <ul class="menu-overlay">
+            <li>sequentia</li>
+            <li>effectrix</li>
+            <li>mentemque</li>
+            <li>excludere</li>
+          </ul>
+    </div>
 
   <!-- Add your site or application content here -->
   <div class="nav" role="navigation">
-    <ul>
-      <li>Alloquendo</li>
-      <li>conjunctam</li>
-      <li>devenietur</li>
-      <li>affirmabam</li>
-    </ul>
+    <div class="menu-line_one"></div>
+    <div class="menu-line_two"></div>
+    <div class="menu-line_three"></div>
+    </div>
   </div>
   <canvas id="canvas"></canvas>
-  <div class="content" role="content"> <!-- Main section -->
+  <div class="content" role="content">
+    <!-- Main section -->
     <ul class="circle_rows">
-      <li class="circle"><img src="img/bridge.jpg" alt = ""/></li>
-      <li class="circle"><img src="img/paintbrush.jpg" alt = ""/></li>
-      <li class="circle"><img src="img/horse.jpg" alt = ""/></li>
-      <li class="circle"><img src="img/phonebox.jpg" alt = ""/></li>
-      <li class="circle"><img src="img/wall.jpg" alt = ""/></li>
-      <li class="circle"><img src="img/rabbit.jpg" alt = ""/></li>
-      <li class="circle"><img src="img/paintbrush.jpg" alt = ""/></li>
-      <li class="circle"><img src="img/phonebox.jpg" alt = ""/></li>
-      <li class="circle"><img src="img/sparkler.jpg" alt = ""/></li>
-      <li class="circle"><img src="img/hat.jpg" alt = ""/></li>
-      <li class="circle"><img src="img/paintbrush.jpg" alt = ""/></li>
-      <li class="circle"><img src="img/sparkler.jpg" alt = ""/></li>
+      <li class="circle"><img src="img/bridge.jpg" alt="" /></li>
+      <li class="circle"><img src="img/paintbrush.jpg" alt="" /></li>
+      <li class="circle"><img src="img/horse.jpg" alt="" /></li>
+      <li class="circle"><img src="img/phonebox.jpg" alt="" /></li>
+      <li class="circle"><img src="img/wall.jpg" alt="" /></li>
+      <li class="circle"><img src="img/rabbit.jpg" alt="" /></li>
+      <li class="circle"><img src="img/paintbrush.jpg" alt="" /></li>
+      <li class="circle"><img src="img/phonebox.jpg" alt="" /></li>
+      <li class="circle"><img src="img/sparkler.jpg" alt="" /></li>
+      <li class="circle"><img src="img/hat.jpg" alt="" /></li>
+      <li class="circle"><img src="img/paintbrush.jpg" alt="" /></li>
+      <li class="circle"><img src="img/sparkler.jpg" alt="" /></li>
     </ul>
   </div>
 
-  <div class="about_section" role="article"> <!-- Second section -->
+  <div class="about_section" role="article">
+    <!-- Second section -->
     <img src="img/person.jpg" />
     <div class="about">
-        <h1>Admonitus distincte</h1>
-        <h2>jam est cogitatio succedens</h2>
-        <p>opinantem archetypi. Ita geometriam sub parentibus pensitatis pro. Progressus ut inchoandum abducendam eo dulcedinem exponantur quaerantur. Co im contingit existeret at confidere. Cognoscam nam jam cunctaque qui importare. Cum numeri ero sensus
-          facere regula accepi. Curam paulo hac mei rea cui solus tactu istae.</p>
-      </div>
+      <h1>Admonitus distincte</h1>
+      <p>opinantem archetypi. Ita geometriam sub parentibus pensitatis pro. Progressus ut inchoandum abducendam eo dulcedinem exponantur quaerantur. Co im contingit existeret at confidere. Cognoscam nam jam cunctaque qui importare. Cum numeri ero sensus
+        facere regula accepi.</p>
+    </div>
   </div>
 
-  <div class="contact_section" role="form"> <!-- Final section-->
+  <div class="contact_section" role="form">
+    <!-- Final section-->
     <h3>Immorari atheorum</h3>
-      <h4><p>assignem vos vim viderunt has totumque</p></h4>
+    <h4><p>assignem vos vim viderunt has totumque</p></h4>
 
     <div class="right_section">
       <p>Fortasse credimus utrimque usitatus lectorum ad ii. Utramque inventae augeatur pla loquendi nec deficere tangatur sed his. Judicia suo spatium iis differt deo errores naturae. Perfectum admonitus ad creatorem ab.</p>
 
-      <br><img class="icon icons8-Marker" alt = "" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAE/0lEQVRoge1ZTWhcVRS+lCy6yKKLjHnv3FEHqZqWKhVrqeCii4AushAaxI3/XYmLIl1EW8pAFy5cdFFCnHfPnUG7aNFFBKlx5p6bWxMk1OIPVMyii4hRKYQSMGIXWTwX777JM5P3k5k7nQp+8BYhZ875zr3n797L2P/oRMU09gIF46BR+IQGFN4Cwg37rfiEBjQKTsFExTT2DppvB0qm4XEtL1jCYcFvw9dypmQa3qD5M2aqQ6BEFQjX2wS1XPY1ngcKxqFZGyuZ6eGSmR6GZm0MKBiP/oc/JB0CJarMVIcG4kPJNDwgXEwQmuWt4HDR30OzNsYJLyV+v3jPd2e0iYeAcNUSWPFb8ki3ungrOAxaLltdq9CsjbnkmoqyxqNAuGANf+pR8EzPOkk8yUnEu7PgaTzqgms6THUoEU6LJTM97Fa3VLHuvuYMEJ4DwtBXaFzsRId+hU8BSW2dOedaP2OsndzrQBj2khN58FvyiHVkvS/Jb/tECISzzpVvt2WrGdfyglPFUceOml2RElsy08OgxBQQztrqtgqEs6DEVJG8Kn+F++Me4zRXONUn7Qpdy5VV8iXQSGkdnRMaIHw5T4+v8GokX5904gRjjIFGAYShr/F8lpynxPFkg+MUTICpjYCpjXAKJvzIiRAIN7kSxzJtRjsa+lrOOHNki0AwniZTMtPDQLjSju2dQsJUh+yIEoKWy1mDIyj5HBCGPqFx5AZjdooNs7puvIJFekB7YRSeTpPx5mYqVuZWL9z/TZLwNhCGDy9c8jNkLkc9Rp7I0+crecI6fTlNxvuyXrIyt7vlvRPJVSAMuRHlVHIab0aOiAN5+vyvxQHbWG+myXAjytaR37vl3QEgXALCMCtBgfCnoo549NHBKJcyHCH5rA2tG93y3onkbFQKg4leZLZIBhN5zRUIX7Qyc93y7jQcd3WF76QajssloSme7GIqVUaJU1F1Q9EL9zSlH6bJJMtvVr+xJ8oQCFeyuvzW4olqj/QTSklMRsalypJLNkSf0GQ1RE+J41m6EseF3CmgMEap/giQ/A0I74w28VCWrIsRJTo14p9AuOZR/aAzRxhjDEh+AYQhtPBknmyvQyO08GSRCOgKQPi2XdUrzpV32rpi56xTzpWXVe0JIFwHhX+UW41HnRuwSITxX35TPN0XI+0ELBBeXdtohxUu9ssG463g9byO3LMNO+r0c7FYWX/MOeF1W31ec62fK/FqpFt+mzXXOQFoGY/rn7OwuseZ4mp1Tzzm+ITvOdObBpiXjwPhz9HKCWfH0PZor8RykcHTCUDLD1zX+XbXzxiDnMPecW3YMHihV32Jabg/d1mZxhWetRNxc/SbTx7oVk/pasMDwla0KPJ9lxwLAVTtIa7lNVtl3u1eD562uzEPzfqDLjkWJ0HiLUvi+7xhcifYaeHHKDfEG/3gWBiJJL24699qOdO34XC3iJ7U8C4QhnlnjCQSZ5e79+xxJw9cizOJw9RjefJlg/uBcH5gCZ6K6AFoqWiIgcaLdjeWBvYImgZf1Z8Hwl+AxN+g8M1UuRa+Yk9/v7roQX1BopSu7TT0gamNxJd9Wdel9wW23gGl2h428VB4X1SpPHDTOAYkvtt+lZMoCNf7/2rrCIlbwk2gYDz6cDP+e9D8doX2Owjhmv1CrvDsoHntHlFJntu6sJOfDZpS16iYxj4gvAGESxXT2DdoPv8J/AOSZO9q1ygnqwAAAABJRU5ErkJggg=="
-        width="50" height="50">Fit debiliora</br>
-      <br><img class="icon icons8-Phone" alt = "" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAEgUlEQVRogc1aL2wbVxg3sLQAg4Ba9X3PmqwpoKAgmgYCKi2goCCgoKCTpmmTBgYDCgYKLBUYBERaZUW5970cyKSAgIJKTeP3vT1pAQEFBgEFAZ5kYBBQ0GkBATfg95xXN3l35/rO95NC4u/d/b77/n93lYoHQOHDgMQhEF4BYR8IH/vkywfdroLCLSCMp/6uAsJHi6aXCnXdrQWE2hC/DCTfZJo3QfK2+d+wpaPlRfP0gmneBCXeG8KjoCe+c393FIwWxTERcLx7DwhHQBgzhWdM8+YtMpdAGDMKNxbB04u6jhrWEgGhrutu7TZZkPislC7W0tGS404nPiUqlco4ERCels7FQIkOEMYg8Rz07p00Z+4e432TksvjYkA4AMK4Ifl6pnNly2K2RmQ+OHaxPhDGgRI7OVDLBmuRu8d4P+tZ1gtXrYuBFA/y4JcaQHhkrPJ0pvM2xgj78+aWCUzi8y/JQC0dLQHhBRDGN9WewsAkX7NBW9Htatbzdd2tmSJ5lTbr5YNx0A5mTaWsF/42fhBC5kEvE0Dy3w2Z11nOtXS0bN2qFC0+6N071j1YL1xNfc7UkoBQ58kvE5gS2+bJvkolr3kTCD/OUkxzRV1HDUssTU1ghPtja4jDIvhlgtN2nPoymJPp4sbRTqtAiulggndomshnt8mZmLoAwjiQfLNIjqnBpPgJlPgPCP/xzeeg9n4BEv8C4Qh6/IciOaZGoMTOpO3wuJizoBjB8e69IjmmgqnWAyCMQYnOrYK6XQUSr+08U9dRo0Ca6dCQfH3S2XoaSqN038i9S5wwFwFnPv/oK5TuzJ9qXC4aK2/++AoIu7Z6g9r79jbZxl973wPh36bV+fNr2vumSK6J+NR1hPQGv7NSKqVlGkc7Lac5PPDJGmUuSqsMSPHAtjBMiW2vbNktwyjcuJ7RedsnO6XMadrUXNfd2iwDXmYw4k+sMkntydQueeArmkD4GAhfmXHiEghPmORr89fAvWkPf7VNY9LSwnTV72wan257zLLvxLle7MTYFSjcytU1A8k37c0Y8Sd+Zbo1IDyYEFWiY+aZyCm6HwLJN1s6Wq7odtV04va3Qa4zj6NMqi44UPjCITd5ecSU2L5pW2n2Zv3rB4Avc7OOqwyT+DxJHih8aEeFgMRh8y2ueA8UaR0gfGpvlJSaK5Xx3JOVDOuFq0zhmWudXHbOJpuZl0C4n0cKHb8CwS3HOsNc3ga4RRNIyLwWdkzyNSetxwHxH/O5iS2EEs9nWY6ngbHOS2uZPO7xWe1ISs+zwuydZ3stkvEm0cT8Cl/MO24m61qJ5/O87o0ww5kNztN5zfbNt7gChB+AMGa98Od5XDMRAeEjWzvAfITwJddr6WjZCXbvWDF3mJ3ZtasR6ix7Zuc6S7Y3YwrPFjYimFHAWidmhPuJ1d1Ct6vmI58YCIcL39oY1+jYAmpi6MBX7ae+kSnXHm28fUH+SSOpxHtQuMUo3LBP3DSPNp0PS6WEC+fro9FEoRv+xjFRwiXgZ9DtakPydVCiY9xoMBm0Elr4/wH1hucsQIomCwAAAABJRU5ErkJggg=="
-        width="50" height="50">ego meditatas</br>
-      <br><img class="icon icons8-Message" alt = "" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAADkklEQVRoge1YPWgUQRS+IoWFRZA7c/PmxBNSpBAMomBhYWlhYWEhaGGhYiEoEiGFxYGCkiBWJuzNG68QE7BJkSJ3N2+cwiKFhUjAIAmkSBEkgoWCoshZ7Mxlc9m77F5+Vo/9YOGOnX37fbvzvvexmUyKFClSpEgCQNjohaP3hCS9M7pF7wqBmjeUNKm4gJo3FNYja1yJM0mTiwpWl6eAcK1Ns4tlRi9uJk1yO4DG60D4qZ1rVdxvpsTdpMm2A1PiLhD+tlynQ5sdlBh1/7mWz5ImvQmm1Me1fNZ82BofZjIdXIuTuASEP4CwwQlfZkypLzn2PnLm+UEgnLFcf/N6+Zo719F+gfAyEL4HwgYoMcXfyBP7zt5x0d5JIHxteX5gJK+0cO08R6y1rQBhA7RcLFRxcP/o+yhUcRC0XLQcV8JGRKSBmDOVPBC+S8KeW+z1Xc5U8mHrIk92f3/KWbvuGxBe3Dv6PjiVL9h7NYBwJmeeH2y3NlZEgVkvCyTH/LXyCyh5f/fp++Ak7wHJz/ZeYzDrZTty6yZrgcKR5tzROL471AP1tXzcrK9wJNI13YZGruWtDRPACabxaPfUfQzUxDHQOOGammt5K+q1O0q/oORZIFy3174tmkp/fPo+rKG8tbXWQcmzsbjsNMZbV2k4e87PTRbj1oCaNwQKl5rTui5Pxa6xEyGFKg5yjQubAyeuxSHS8lZtLMKFuPOq+x4JWCPXuGAHpwtvkeyZkbgaCH4ztoabV984lS/snRBT6gMlSoEnOB30d9A47rIQKDEamtFMqY8rfLAR/OSkW1c0lQMQSOCgRClKzoslpGgq/UA4t0E03BpB4e3mk9ZykZO4BMbLgvGy9k2+DxAdDa1Rx+uBtzW3nZFEFsLr5eFAQ67llTjXqTAjPB+IFmHH1+22H1fiTLOGwqWBGh7fkRC7l11UmOdGFDoRcCiaSr/dhvO2odeBcB40jrfLTK3ImUqeERrXN4zE1dhCDpMYAMInQPgTCP8wwqdQe3EkCoHdxNGqx0CJMU74y3J5cpjEQHBNWyF5Kp8Gja/clGWEd/ZbQCts7y3b3prKU/l081yYEDvkVpsiuhhQewVeLw+Di0aEq47bFiGb3UIqMJ1TZxIA42U3uafPOexzEH5nCh9tF52TRKGKh5jChwET2iLkIyPxz3/TcmBa3gDCj1uF9Mon06RJdYveFfK/H70jJEWKFClSJIG/o5aIxW9YUqIAAAAASUVORK5CYII="
-        width="50" height="50">pergamque concipere</br>
+      <img class="icon icons8-Marker" alt="" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAE/0lEQVRoge1ZTWhcVRS+lCy6yKKLjHnv3FEHqZqWKhVrqeCii4AushAaxI3/XYmLIl1EW8pAFy5cdFFCnHfPnUG7aNFFBKlx5p6bWxMk1OIPVMyii4hRKYQSMGIXWTwX777JM5P3k5k7nQp+8BYhZ875zr3n797L2P/oRMU09gIF46BR+IQGFN4Cwg37rfiEBjQKTsFExTT2DppvB0qm4XEtL1jCYcFvw9dypmQa3qD5M2aqQ6BEFQjX2wS1XPY1ngcKxqFZGyuZ6eGSmR6GZm0MKBiP/oc/JB0CJarMVIcG4kPJNDwgXEwQmuWt4HDR30OzNsYJLyV+v3jPd2e0iYeAcNUSWPFb8ki3ungrOAxaLltdq9CsjbnkmoqyxqNAuGANf+pR8EzPOkk8yUnEu7PgaTzqgms6THUoEU6LJTM97Fa3VLHuvuYMEJ4DwtBXaFzsRId+hU8BSW2dOedaP2OsndzrQBj2khN58FvyiHVkvS/Jb/tECISzzpVvt2WrGdfyglPFUceOml2RElsy08OgxBQQztrqtgqEs6DEVJG8Kn+F++Me4zRXONUn7Qpdy5VV8iXQSGkdnRMaIHw5T4+v8GokX5904gRjjIFGAYShr/F8lpynxPFkg+MUTICpjYCpjXAKJvzIiRAIN7kSxzJtRjsa+lrOOHNki0AwniZTMtPDQLjSju2dQsJUh+yIEoKWy1mDIyj5HBCGPqFx5AZjdooNs7puvIJFekB7YRSeTpPx5mYqVuZWL9z/TZLwNhCGDy9c8jNkLkc9Rp7I0+crecI6fTlNxvuyXrIyt7vlvRPJVSAMuRHlVHIab0aOiAN5+vyvxQHbWG+myXAjytaR37vl3QEgXALCMCtBgfCnoo549NHBKJcyHCH5rA2tG93y3onkbFQKg4leZLZIBhN5zRUIX7Qyc93y7jQcd3WF76QajssloSme7GIqVUaJU1F1Q9EL9zSlH6bJJMtvVr+xJ8oQCFeyuvzW4olqj/QTSklMRsalypJLNkSf0GQ1RE+J41m6EseF3CmgMEap/giQ/A0I74w28VCWrIsRJTo14p9AuOZR/aAzRxhjDEh+AYQhtPBknmyvQyO08GSRCOgKQPi2XdUrzpV32rpi56xTzpWXVe0JIFwHhX+UW41HnRuwSITxX35TPN0XI+0ELBBeXdtohxUu9ssG463g9byO3LMNO+r0c7FYWX/MOeF1W31ec62fK/FqpFt+mzXXOQFoGY/rn7OwuseZ4mp1Tzzm+ITvOdObBpiXjwPhz9HKCWfH0PZor8RykcHTCUDLD1zX+XbXzxiDnMPecW3YMHihV32Jabg/d1mZxhWetRNxc/SbTx7oVk/pasMDwla0KPJ9lxwLAVTtIa7lNVtl3u1eD562uzEPzfqDLjkWJ0HiLUvi+7xhcifYaeHHKDfEG/3gWBiJJL24699qOdO34XC3iJ7U8C4QhnlnjCQSZ5e79+xxJw9cizOJw9RjefJlg/uBcH5gCZ6K6AFoqWiIgcaLdjeWBvYImgZf1Z8Hwl+AxN+g8M1UuRa+Yk9/v7roQX1BopSu7TT0gamNxJd9Wdel9wW23gGl2h428VB4X1SpPHDTOAYkvtt+lZMoCNf7/2rrCIlbwk2gYDz6cDP+e9D8doX2Owjhmv1CrvDsoHntHlFJntu6sJOfDZpS16iYxj4gvAGESxXT2DdoPv8J/AOSZO9q1ygnqwAAAABJRU5ErkJggg=="
+        width="50" height="50"><span>Fit debiliora</span>
+      <img class="icon icons8-Phone" alt="" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAEgUlEQVRogc1aL2wbVxg3sLQAg4Ba9X3PmqwpoKAgmgYCKi2goCCgoKCTpmmTBgYDCgYKLBUYBERaZUW5970cyKSAgIJKTeP3vT1pAQEFBgEFAZ5kYBBQ0GkBATfg95xXN3l35/rO95NC4u/d/b77/n93lYoHQOHDgMQhEF4BYR8IH/vkywfdroLCLSCMp/6uAsJHi6aXCnXdrQWE2hC/DCTfZJo3QfK2+d+wpaPlRfP0gmneBCXeG8KjoCe+c393FIwWxTERcLx7DwhHQBgzhWdM8+YtMpdAGDMKNxbB04u6jhrWEgGhrutu7TZZkPislC7W0tGS404nPiUqlco4ERCels7FQIkOEMYg8Rz07p00Z+4e432TksvjYkA4AMK4Ifl6pnNly2K2RmQ+OHaxPhDGgRI7OVDLBmuRu8d4P+tZ1gtXrYuBFA/y4JcaQHhkrPJ0pvM2xgj78+aWCUzi8y/JQC0dLQHhBRDGN9WewsAkX7NBW9Htatbzdd2tmSJ5lTbr5YNx0A5mTaWsF/42fhBC5kEvE0Dy3w2Z11nOtXS0bN2qFC0+6N071j1YL1xNfc7UkoBQ58kvE5gS2+bJvkolr3kTCD/OUkxzRV1HDUssTU1ghPtja4jDIvhlgtN2nPoymJPp4sbRTqtAiulggndomshnt8mZmLoAwjiQfLNIjqnBpPgJlPgPCP/xzeeg9n4BEv8C4Qh6/IciOaZGoMTOpO3wuJizoBjB8e69IjmmgqnWAyCMQYnOrYK6XQUSr+08U9dRo0Ca6dCQfH3S2XoaSqN038i9S5wwFwFnPv/oK5TuzJ9qXC4aK2/++AoIu7Z6g9r79jbZxl973wPh36bV+fNr2vumSK6J+NR1hPQGv7NSKqVlGkc7Lac5PPDJGmUuSqsMSPHAtjBMiW2vbNktwyjcuJ7RedsnO6XMadrUXNfd2iwDXmYw4k+sMkntydQueeArmkD4GAhfmXHiEghPmORr89fAvWkPf7VNY9LSwnTV72wan257zLLvxLle7MTYFSjcytU1A8k37c0Y8Sd+Zbo1IDyYEFWiY+aZyCm6HwLJN1s6Wq7odtV04va3Qa4zj6NMqi44UPjCITd5ecSU2L5pW2n2Zv3rB4Avc7OOqwyT+DxJHih8aEeFgMRh8y2ueA8UaR0gfGpvlJSaK5Xx3JOVDOuFq0zhmWudXHbOJpuZl0C4n0cKHb8CwS3HOsNc3ga4RRNIyLwWdkzyNSetxwHxH/O5iS2EEs9nWY6ngbHOS2uZPO7xWe1ISs+zwuydZ3stkvEm0cT8Cl/MO24m61qJ5/O87o0ww5kNztN5zfbNt7gChB+AMGa98Od5XDMRAeEjWzvAfITwJddr6WjZCXbvWDF3mJ3ZtasR6ix7Zuc6S7Y3YwrPFjYimFHAWidmhPuJ1d1Ct6vmI58YCIcL39oY1+jYAmpi6MBX7ae+kSnXHm28fUH+SSOpxHtQuMUo3LBP3DSPNp0PS6WEC+fro9FEoRv+xjFRwiXgZ9DtakPydVCiY9xoMBm0Elr4/wH1hucsQIomCwAAAABJRU5ErkJggg=="
+        width="50" height="50"><span>ego meditatas</span>
+      <img class="icon icons8-Message" alt="" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAADkklEQVRoge1YPWgUQRS+IoWFRZA7c/PmxBNSpBAMomBhYWlhYWEhaGGhYiEoEiGFxYGCkiBWJuzNG68QE7BJkSJ3N2+cwiKFhUjAIAmkSBEkgoWCoshZ7Mxlc9m77F5+Vo/9YOGOnX37fbvzvvexmUyKFClSpEgCQNjohaP3hCS9M7pF7wqBmjeUNKm4gJo3FNYja1yJM0mTiwpWl6eAcK1Ns4tlRi9uJk1yO4DG60D4qZ1rVdxvpsTdpMm2A1PiLhD+tlynQ5sdlBh1/7mWz5ImvQmm1Me1fNZ82BofZjIdXIuTuASEP4CwwQlfZkypLzn2PnLm+UEgnLFcf/N6+Zo719F+gfAyEL4HwgYoMcXfyBP7zt5x0d5JIHxteX5gJK+0cO08R6y1rQBhA7RcLFRxcP/o+yhUcRC0XLQcV8JGRKSBmDOVPBC+S8KeW+z1Xc5U8mHrIk92f3/KWbvuGxBe3Dv6PjiVL9h7NYBwJmeeH2y3NlZEgVkvCyTH/LXyCyh5f/fp++Ak7wHJz/ZeYzDrZTty6yZrgcKR5tzROL471AP1tXzcrK9wJNI13YZGruWtDRPACabxaPfUfQzUxDHQOOGammt5K+q1O0q/oORZIFy3174tmkp/fPo+rKG8tbXWQcmzsbjsNMZbV2k4e87PTRbj1oCaNwQKl5rTui5Pxa6xEyGFKg5yjQubAyeuxSHS8lZtLMKFuPOq+x4JWCPXuGAHpwtvkeyZkbgaCH4ztoabV984lS/snRBT6gMlSoEnOB30d9A47rIQKDEamtFMqY8rfLAR/OSkW1c0lQMQSOCgRClKzoslpGgq/UA4t0E03BpB4e3mk9ZykZO4BMbLgvGy9k2+DxAdDa1Rx+uBtzW3nZFEFsLr5eFAQ67llTjXqTAjPB+IFmHH1+22H1fiTLOGwqWBGh7fkRC7l11UmOdGFDoRcCiaSr/dhvO2odeBcB40jrfLTK3ImUqeERrXN4zE1dhCDpMYAMInQPgTCP8wwqdQe3EkCoHdxNGqx0CJMU74y3J5cpjEQHBNWyF5Kp8Gja/clGWEd/ZbQCts7y3b3prKU/l081yYEDvkVpsiuhhQewVeLw+Di0aEq47bFiGb3UIqMJ1TZxIA42U3uafPOexzEH5nCh9tF52TRKGKh5jChwET2iLkIyPxz3/TcmBa3gDCj1uF9Mon06RJdYveFfK/H70jJEWKFClSJIG/o5aIxW9YUqIAAAAASUVORK5CYII="
+        width="50" height="50"><span>pergamque concipere</span>
     </div>
 
     <form class="form" name="form" role="form">
-      <input type="text" name="firstname" value="Name (Required)"><br>
-      <input type="text" name="email" value="Email (Required)"><br>
-      <input type="text" name="subject" value="Subject"><br>
-      <input type="text" name="text-area" value="Write your message here..."><br>
+      <input type="text" name="firstname" placeholder="Name (Required)"><br>
+      <input type="text" name="email" placeholder="Email (Required)"><br>
+      <input type="text" name="subject" placeholder="Subject"><br>
+      <input type="text" name="textArea" placeholder=""="Write your message here..."><br>
       <input type="submit" name="submit" value="Submit">
     </form>
 
@@ -91,6 +99,8 @@
   <script src="js/main.js"></script>
   <script src="js/scroll.js"></script>
   <script src="js/form.js"></script>
+  <script src="js/imageSlider.js"></script>
+  <script src="js/nav.js"></script>
   <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
   <script>
     (function(b, o, i, l, e, r) {

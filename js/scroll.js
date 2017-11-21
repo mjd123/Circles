@@ -1,23 +1,39 @@
+const windowWidth = window.innerWidth;
 
+//$(document).ready(() => {
+//});
 
-$(document).ready(function() {
+const movingEl = $('.about_section');
+const fixedEl = $('.contact_section');
 
-  $(window).scroll(function() {
-    var movingEl = $('.about_section');
-    var movingElChildren = $('.about');
-    var body = $('body');
-    
-    var yPos = $(window).scrollTop() / 11;
-    var coords = -yPos + 'px';
+/// 11;
 
-    movingEl.css('bottom', yPos);
-    movingElChildren.css('bottom', yPos / 2);
+// find top of both else find diffence between them so as user scrolls down difference decreases
 
-    if ($(window).scrollTop() >= 1000) {
-      body.css('background', '#333333') //form section background
-    } else {
-      body.css('background', '#e5e5e5')
-    }
-  });
+function parallax() {
+  const yPos = $(window).scrollTop();
+  var topOfEl = movingEl.offset().top; //top of el
+  var viewPort = $(window).height() + movingEl.offset().top;// everything u can see
 
-});
+  var bottomOfEl = movingEl.outerHeight(true) + topOfEl;
+  var topOfFixed = fixedEl.offset().top;
+  var scroll = yPos - (topOfFixed - topOfEl);
+  var bottomOfScreen = yPos + $(window).height(); //bottom of screen in view
+  var scrolledHeight = window.pageYOffset;
+
+  console.log(scrolledHeight);
+  console.log(bottomOfEl + 'bottomOfEl');
+  console.log(topOfEl);
+  console.log(bottomOfScreen + 'bottomOfScreen');
+
+  if (bottomOfScreen > bottomOfEl) {
+    movingEl.css({ transform: `translateY(${bottomOfScreen - bottomOfEl}px)` });
+    console.log('!!!!!');
+  }else {
+    movingEl.css({ transform: 'translateY(0px)' });
+  }
+
+  //  requestAnimationFrame(parallax);
+}
+
+window.addEventListener('scroll', parallax);

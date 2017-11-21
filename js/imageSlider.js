@@ -18,7 +18,6 @@ if (width <= 414) {
     elemLeft.src = 'img/next.png';
     elemRight.classList.add('next-arrow');
     elemLeft.classList.add('previous-arrow');
-    console.log(width);
   }());
 }
 
@@ -38,12 +37,10 @@ function sliderNext() {
   circleImg[0].src = imgSrc[clickCounter];
   circleImg[1].src = imgSrc[clickCounter + 1];
   circleImg[2].src = imgSrc[clickCounter + 2];
-
   if (clickCounter === 9) {
     clickCounter = -3;
   }
 }
-
 
 function sliderPrevious() {
   if (clickCounter <= 0) { /** cycle backwards though imgs */
