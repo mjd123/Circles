@@ -17,8 +17,8 @@ window.addEventListener('load', lineWalk);
 // pigmants on pageview
 
 const canvas = document.querySelector('#canvas');
-let styles = getComputedStyle(content);
-let marginTop = parseFloat(styles['marginTop']);
+const styles = getComputedStyle(content);
+const marginTop = parseFloat(styles['marginTop']);
 
 canvas.width = content.clientWidth;
 canvas.height = content.offsetHeight + marginTop;
@@ -27,11 +27,11 @@ const circle = document.querySelectorAll('.circle');
 
 ctx.lineJoin = 'round';
 ctx.lineCap = 'round';
-// ctx.lineWidth = 5;
+ctx.fillStyle = 'rgba(49, 188, 159, 1)';
 
-const numberOfParticles = 1;
+const numberOfParticles = 2; //number of partices
 const circlesDrawn = [];
-const pointSize = 0;
+let pointSize = 0;
 
 const radius = circle[0].clientWidth / 2; // radius calc
 let centerX = 0;
@@ -43,15 +43,12 @@ const position = {
   height: 0,
 };
 
-let isDrawn = false;
-let timeOut;
-
 //random number function
 function getRandomInt(min, max) {
   return Math.floor(Math.random() * (max - min + 1)) + min;
 }
 
-//find position function
+//find position of circle img function
 function circleSuround() {
   circlesDrawn.splice(0, numberOfParticles);
 
@@ -62,20 +59,21 @@ function circleSuround() {
   position.width = rect.width / 2;
   position.height = rect.height / 2;
 
-  centerX = position.left + position.width;   //x positon of circle img centre
-  centerY = position.top + position.height + window.scrollY;  //scrolling doesnt affect particle position
-  console.log({ centerY, centerX });
-  point_size = getRandomInt(3, 5);
+  //x positon of circle img centre
+  centerX = position.left + position.width;
+  //scrolling doesnt affect particle position
+  centerY = position.top + position.height + window.scrollY;
+  pointSize = getRandomInt(3, 5);
 }
 
 //check if circle can be drawn function and set up
-function drawCircle(amount) {
-  if (circlesDrawn.length == numberOfParticles) {
+function drawCircle() {
+  if (circlesDrawn.length === numberOfParticles) {
     for (let i = 0; i < numberOfParticles; i++) {
       drawPoint(circlesDrawn[i].angle, 1);
     }
   } else {
-    for (let l = 0; l < numberOfParticles; l++) {
+    for (let i = 0; i < numberOfParticles; i++) {
       circlesDrawn.push({
         angle: getRandomInt(0, 360),
         distance: 0.5,
@@ -104,22 +102,32 @@ function movePoints() {
     } else {
       circlesDrawn[i].angle++;
     }
+
+    /*if (i % 2 == 0) {
+      circlesDrawn[i].angle--;
+      console.log(circlesDrawn[i]);
+    }*/ // multiply circles moving at diffrent speeds and direction
   }
 }
 
+var iD; //variable for cancelAnimation
+
 //put everything together and clear canvas and redraw
-var GameLoop = function () {
-  clearTimeout(timeOut);
+function gameLoop() {
   ctx.clearRect(0, 0, canvas.width, canvas.height);
   movePoints();
   drawCircle();
-  timeOut = setTimeout(GameLoop, 1000 / 50); //change to animateframe
-};
+  iD = requestAnimationFrame(gameLoop);
+}
 
-// canvas needs to clear when scrolled
+function cancelAnimation() {
+  window.cancelAnimationFrame(iD);
+}
+
 // there needs to be a maximum amount of particles on the page
 
 for (let i = 0; i < circle.length; i++) {
   circle[i].addEventListener('mouseover', circleSuround);
-  circle[i].addEventListener('mouseover', GameLoop);
+  circle[i].addEventListener('mouseover', gameLoop);
+  circle[i].addEventListener('mouseleave', cancelAnimation);
 }
