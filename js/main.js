@@ -29,7 +29,7 @@ ctx.lineJoin = 'round';
 ctx.lineCap = 'round';
 ctx.fillStyle = 'rgba(49, 188, 159, 1)';
 
-const numberOfParticles = 2; //number of partices
+const numberOfParticles = 1; //number of partices
 const circlesDrawn = [];
 let pointSize = 0;
 
@@ -102,11 +102,10 @@ function movePoints() {
     } else {
       circlesDrawn[i].angle++;
     }
-
-    /*if (i % 2 == 0) {
-      circlesDrawn[i].angle--;
+    /* if (i % 2 == 0) {
+      circlesDrawn[i].angle--;  // multiply circles moving at diffrent speeds and direction
       console.log(circlesDrawn[i]);
-    }*/ // multiply circles moving at diffrent speeds and direction
+    } */
   }
 }
 
