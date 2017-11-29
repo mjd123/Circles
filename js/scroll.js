@@ -27,7 +27,7 @@ function parallax() {
   console.log(bottomOfScreen + 'bottomOfScreen');
 
   if (bottomOfScreen > bottomOfEl) {
-    movingEl.css({ transform: `translateY(${bottomOfScreen - bottomOfEl}px)` });
+    movingEl.css({ transform: `translateY(${Math.round(bottomOfScreen - bottomOfEl)}px)` });
     console.log('!!!!!');
   }else {
     movingEl.css({ transform: 'translateY(0px)' });
