@@ -100,7 +100,7 @@ body {
 
 .nav {
   background-color: #333333;
-  position: absolute;
+  position: fixed;
   right: 0;
   left: 0;
   margin-left: auto;
@@ -109,8 +109,8 @@ body {
   width: 114px;
   height: 114px;
   border-radius: 50%;
-  -webkit-box-shadow: 10px 10px 35px rgba(48,95,129,0.1);
-          box-shadow: 10px 10px 35px rgba(48,95,129,0.1);
+  -webkit-box-shadow: 5px 5px 15px #333333;
+          box-shadow: 5px 5px 15px #333333;
   z-index: 5;
   cursor: pointer;
   -webkit-transition: all 0.3s ease;
@@ -197,6 +197,16 @@ body {
 }
 
 #menu {
+  position: absolute;
+  right: 0;
+  left: 0;
+  margin-left: auto;
+  margin-right: auto;
+  top: -57px;
+  width: 114px;
+  height: 114px;
+  border-radius: 50%;
+  transform-origin: bottom;
   -webkit-transition: all 0.5s ease;
   -o-transition: all 0.5s ease;
   transition: all 0.5s ease;
@@ -210,11 +220,12 @@ body {
   top: 0;
   left: 0;
   right: 0;
+  border-radius: 0%;
   z-index: 3;
   opacity: 0.95;
-  -webkit-transition: all 1s ease;
-  -o-transition: all 1s ease;
-  transition: all 1s ease;
+  -webkit-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  transition: all 0.5s ease;
 }
 
 .menu-overlay {
@@ -321,15 +332,12 @@ body {
   padding-left: 0;
 }
 
-.circle_rows li:nth-of-type(n + 4) {
-  display: none;
-}
-
 .circle {
   height: auto;
   width: auto;
   max-height: 250px;
   max-width: 250px;
+  padding: 1em;
 }
 
 .circle_rows {
@@ -363,15 +371,11 @@ body {
 
 .circle_rows img {
   margin: auto;
-  padding: 1em;
-  width: 80%;
-  height: auto;
   max-height: 200px;
   max-width: 200px;
   -moz-border-radius: 50%;
   -webkit-border-radius: 50%;
   border-radius: 50%;
-  overflow: hidden;
   -webkit-filter: grayscale(100%);
   /* Safari 6.0 - 9.0 */
   filter: grayscale(100%);
@@ -406,10 +410,10 @@ body {
       flex-wrap: wrap;
   background-color: rgba(49, 188, 159, 1);
   z-index: -5;
-  transition: .05s ease-in-out;
-  -webkit-transition: .05s ease-in-out;
-  -moz-transition: .05s ease-in-out;
-  -o-transition: .05s ease-in-out;
+  transition: .05s linear;
+  -webkit-transition: .05s linear;
+  -moz-transition: .05s linear;
+  -o-transition: .05s linear;
 }
 
 .about_section img {
@@ -419,11 +423,19 @@ body {
   -webkit-border-radius: 100%;
   max-width: 232px;
   max-height: 232px;
+  transition: .05s linear;
+  -webkit-transition: .05s linear;
+  -moz-transition: .05s linear;
+  -o-transition: .05s linear;
 }
 
 .about {
   margin: auto;
   width: 80%;
+  transition: .05s linear;
+  -webkit-transition: .05s linear;
+  -moz-transition: .05s linear;
+  -o-transition: .05s linear;
 }
 
 .about h1, p {
@@ -533,16 +545,21 @@ form input:nth-of-type(5) { /* submit button*/
 
 
 /*large laptop/monitor*/
-@media screen and (max-device-width: 1739px)
-              and (min-device-width: 1036px){
+@media screen and (min-device-width: 1036px){
 
   .circle_rows li:nth-of-type(n + 4) {
-    display: block;
+    display: inline;
+
+  }
+
+  .circle_rows img {
+    margin: auto;
+    padding: 1em;
   }
 
   .circle img {
-    max-width: 300px;
-    max-height: 300px;
+    max-width: 200px;
+    max-height: 200px;
   }
 
   .contact_section {
@@ -564,9 +581,18 @@ form input:nth-of-type(5) { /* submit button*/
     text-align: left;
   }
 
+  .about p {
+    font-size: 0.9em;
+    line-height: 1.5;
+  }
+
   .contact_section h3, h4 { /*inline with form*/
     width: 70%;
     float: left;
+  }
+
+  .contact_section {
+    height: 100vh;
   }
 
   form {
@@ -627,16 +653,17 @@ form input:nth-of-type(5) { /*submit button*/
 
   .about_section {
     height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 
   .about_section img {
-    margin: 100px auto auto 50px;
     min-height: 450px;
     min-width: 450px;
   }
 
   .about {
-    margin: auto;
     max-width: 40%;
   }
 
@@ -645,17 +672,25 @@ form input:nth-of-type(5) { /*submit button*/
   }
 
   .contact_section {
-    height: 100vh;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .contact_section h3 {
+    margin-top: 5em;
   }
 
   .contact_section h3, h4 { /*inline with form*/
     width: 70%;
-    float: left;
+    margin: 2em 0 0 0;
   }
 
   form {
-    width: 70%;
-    float: left;
+    width: 80%;
+    margin: 1.5em 0 0 0;
   }
 
   form input {
@@ -673,7 +708,7 @@ form input:nth-of-type(5) { /*submit button*/
 
   .right_section {
     padding-top: 6em; /* brings para level with form*/
-    width: 20%;
+    width: 60%;
     flex-wrap: wrap;
 }
 
@@ -687,17 +722,31 @@ form input:nth-of-type(5) { /*submit button*/
   }
 
   .right_section span {
-    display: none;
+    display: inline-block;
+    color: white;
   }
 
   .right_section img {
     width: 50px;
     height: 50px;
+    margin-top: 2.5em;
+    margin-left: 1em;
   }
 }
 
 
 
+@media screen and (max-device-width: 1035px)
+              and (min-device-width: 921px)
+              and (orientation: portrait) {
+
+  .contact_section {
+    height: 100vh;
+  }
+}
+
+
+/*tablet*/
 @media screen and (max-device-width: 920px)
               and (min-device-width: 691px){
   .content {
@@ -736,7 +785,7 @@ form input:nth-of-type(5) { /*submit button*/
   }
 
   .contact_section {
-    height: auto;
+    height: 100vh;
   }
 
   .contact_section h3, h4 {
@@ -766,7 +815,7 @@ form input:nth-of-type(5) { /*submit button*/
 
   .right_section p, .right_section span {
     display: block;
-    margin-top: 2.5em;
+    margin-top: 2em;
     color: white;
   }
 
@@ -784,7 +833,7 @@ form input:nth-of-type(5) { /*submit button*/
     margin-top: 150px;
     }
 }
-
+/*small tablet*/
 @media screen and (max-device-width: 696px)
               and (min-device-width: 600px) {
 
@@ -830,8 +879,8 @@ form input:nth-of-type(5) { /*submit button*/
 
 /*mobile landscape*/
 @media screen and (min-width:320px)
-and (max-width:767px)
-and (orientation:landscape){
+              and (max-width:767px)
+              and (orientation:landscape){
 
   .circle_rows li:nth-of-type(n + 4) {
     display: block;
@@ -861,6 +910,10 @@ and (orientation:landscape){
 /*mobile*/
 @media screen and (max-device-width: 425px) {
 
+  .menu-line_one.navHover, .menu-line_two.navHover, .menu-line_three.navHover {
+    border: 1px solid #e5e5e5;
+  }
+
   /*arrow added in js*/
   .next-arrow {
     position: absolute;
@@ -877,6 +930,10 @@ and (orientation:landscape){
     top: calc(50% + 140px); /*accounts for margin top of container and arrow height*/
     left: 5%;
     border-right: 3px solid rgba(49, 188, 159, 1);
+  }
+
+  .circle_rows li:nth-of-type(n + 4) {
+    display: none;
   }
 
   .contact_section h3 {

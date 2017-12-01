@@ -15,7 +15,7 @@ function parallax() {
   var topOfEl = movingEl.offset().top; //top of el
   var viewPort = $(window).height() + movingEl.offset().top;// everything u can see
 
-  var bottomOfEl = movingEl.outerHeight(true) + topOfEl;
+  var bottomOfEl = Math.round(movingEl.outerHeight(true) + topOfEl);
   var topOfFixed = fixedEl.offset().top;
   var scroll = yPos - (topOfFixed - topOfEl);
   var bottomOfScreen = yPos + $(window).height(); //bottom of screen in view

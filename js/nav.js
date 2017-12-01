@@ -11,6 +11,7 @@ const itemText = [
   'affectibus',
 ];
 
+/* create overlay - add and remove classes*/
 function overlay() {
   if (menu.classList.contains('open')) {
     menu.classList.remove('open');
@@ -27,6 +28,7 @@ function overlay() {
   }
 }
 
+/* adds + removes classes to nav elements children on hover event*/
 function navHover() {
   const navChildren = nav.children;
   if (navChildren[0].classList.contains('navHover')) {
@@ -40,6 +42,7 @@ function navHover() {
   }
 }
 
+/*adds list items to menuOverlay*/
 function addText(i) {
   menuOverlay.innerHTML += `
     <li>
@@ -50,8 +53,8 @@ function addText(i) {
     `;
 }
 
+/* turns hamburger to X - adds + removes classes to menuLines */
 function escapeButton() {
-  console.log(menuLineone.classList);
   if (menuLineone.classList.contains('open')) {
     menuLineone.classList.remove('open');
     menuLinetwo.classList.remove('open');
@@ -63,6 +66,18 @@ function escapeButton() {
   }
 }
 
+function navOverfooter() {
+  const contactSection = document.querySelector('.contact_section');
+  const contactRect = contactSection.getBoundingClientRect();
+
+  if (contactRect.top < nav.offsetHeight / 4) {
+    nav.style.backgroundColor = 'rgba(49, 188, 159, 1)';
+  } else {
+    nav.style.backgroundColor = '#333333';
+  }
+}
+
 nav.addEventListener('click', overlay);
-nav.addEventListener('mouseover', navHover);
+nav.addEventListener('mouseenter', navHover);
 nav.addEventListener('mouseleave', navHover);
+window.addEventListener('scroll', navOverfooter);

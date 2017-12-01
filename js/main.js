@@ -21,7 +21,7 @@ const styles = getComputedStyle(content);
 const marginTop = parseFloat(styles['marginTop']);
 
 canvas.width = content.clientWidth;
-canvas.height = content.offsetHeight + marginTop;
+canvas.height = content.offsetHeight + marginTop * 2;
 const ctx = canvas.getContext('2d');
 const circle = document.querySelectorAll('.circle');
 
@@ -70,7 +70,7 @@ function circleSuround() {
 function drawCircle() {
   if (circlesDrawn.length === numberOfParticles) {
     for (let i = 0; i < numberOfParticles; i++) {
-      drawPoint(circlesDrawn[i].angle, 1);
+      drawPoint(circlesDrawn[i].angle, 1); /* to edit distance of particle from img*/
     }
   } else {
     for (let i = 0; i < numberOfParticles; i++) {
