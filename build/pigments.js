@@ -205,4 +205,4 @@ for (var i = 0; i < circle.length; i++) {
 
 /***/ })
 /******/ ]);
-//# sourceMappingURL=main.bundle.js.map
+//# sourceMappingURL=pigments.js.map

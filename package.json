@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "babel": "babel --presets es2015 js/main.js -o build/main.bundle.js",
+    "babel": "babel --presets es2015 js/nav.js -o build/nav.bundle.js",
     "start": "http-server",
     "webpack": "webpack"
   },
