@@ -3,7 +3,7 @@ const submitButton = document.form.submit;
 function validate(e) {
   e.preventDefault();
 
-  if (document.form.firstname.value === '') {
+  if (document.form.firstname.value == '') {
     alert('Please provide your name!');
     document.form.firstname.focus();
     return false;

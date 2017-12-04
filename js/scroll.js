@@ -13,7 +13,7 @@ const fixedEl = $('.contact_section');
 function parallax() {
   const yPos = $(window).scrollTop();
   var topOfEl = movingEl.offset().top; //top of el
-  var viewPort = $(window).height() + movingEl.offset().top;// everything u can see
+  var viewPort = $(window).height() + movingEl.offset().top; // everything u can see
 
   var bottomOfEl = Math.round(movingEl.outerHeight(true) + topOfEl);
   var topOfFixed = fixedEl.offset().top;
@@ -21,16 +21,20 @@ function parallax() {
   var bottomOfScreen = yPos + $(window).height(); //bottom of screen in view
   var scrolledHeight = window.pageYOffset;
 
-  console.log(scrolledHeight);
+  /*console.log(scrolledHeight);
   console.log(bottomOfEl + 'bottomOfEl');
   console.log(topOfEl);
-  console.log(bottomOfScreen + 'bottomOfScreen');
+  console.log(bottomOfScreen + 'bottomOfScreen');*/
 
   if (bottomOfScreen > bottomOfEl) {
-    movingEl.css({ transform: `translateY(${Math.round(bottomOfScreen - bottomOfEl)}px)` });
-    console.log('!!!!!');
-  }else {
-    movingEl.css({ transform: 'translateY(0px)' });
+    movingEl.css({
+      transform: `translateY(${Math.round(bottomOfScreen - bottomOfEl)}px)`,
+    });
+    //console.log('!!!!!');
+  } else {
+    movingEl.css({
+      transform: 'translateY(0px)',
+    });
   }
 
   //  requestAnimationFrame(parallax);
