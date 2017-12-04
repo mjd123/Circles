@@ -911,7 +911,7 @@ form input:nth-of-type(5) {
   /*arrow added in js*/
   .next-arrow {
     position: absolute;
-    top: calc(50% + 140px);
+    top: calc(50% + 40px);
     /*accounts for margin top of container and arrow height*/
     right: 5%;
     border-right: 3px solid rgba(49, 188, 159, 1);
@@ -923,7 +923,7 @@ form input:nth-of-type(5) {
     -ms-transform: scaleX(-1);
     transform: scaleX(-1);
     position: absolute;
-    top: calc(50% + 140px);
+    top: calc(50% + 40px);
     /*accounts for margin top of container and arrow height*/
     left: 5%;
     border-right: 3px solid rgba(49, 188, 159, 1);
