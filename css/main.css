@@ -322,9 +322,8 @@ body {
 
 #canvas {
   position: absolute;
-  width: 100%;
   left: 0;
-  right: 0;
+  right: auto;
   top: 0;
 }
 
