@@ -4,9 +4,11 @@ const canvas = document.querySelector('#canvas');
 const styles = getComputedStyle(content);
 const marginTop = parseFloat(styles['marginTop']);
 
-canvas.width = content.clientWidth;
-canvas.height = content.offsetHeight + marginTop * 2;
+
+console.log(content.offsetHeight);
 const ctx = canvas.getContext('2d');
+ctx.canvas.width = content.clientWidth;
+ctx.canvas.height = content.offsetHeight + marginTop * 2;
 const circle = document.querySelectorAll('.circle');
 
 var pig; // for new instance
